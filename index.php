@@ -2,7 +2,7 @@
 
 include('pack/config/config.php');
 
-$get_posts_query = "SELECT * FROM posts ORDER BY `row` DESC";
+$get_posts_query = "SELECT * FROM posts WHERE `status` = 'public' ORDER BY `row` DESC";
 $get_posts_result = mysqli_query($connection, $get_posts_query);
 
 ?>
