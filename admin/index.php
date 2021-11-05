@@ -25,11 +25,13 @@ $get_posts_result = mysqli_query($connection, $get_posts_query);
                 <h3>پست جدید</h3>
                 <br>
                 <div class="dialog">
-                    <input type="text" name="title" placeholder="موضوع" class="form-control">
-                    <br>
-                    <textarea rows="8" class="form-control" name="content" placeholder="پست را اینجا بنویسید . . ."></textarea>
-                    <br>
-                    <button class="btn btn-primary" name="post" type="submit">انتشار</button>
+                    <form method="post" action="index.php">
+                        <input type="text" name="title" placeholder="موضوع" class="form-control">
+                        <br>
+                        <textarea rows="8" class="form-control" name="content" placeholder="پست را اینجا بنویسید . . ."></textarea>
+                        <br>
+                        <button class="btn btn-primary" name="post" type="submit">انتشار</button>
+                    </form>
                 </div>
                 <br>
             </div>
