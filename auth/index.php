@@ -19,7 +19,7 @@ include('core.php');
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 half overflow-auto">
-                <form method="POST" action="index.php">
+                <form method="post" action="index.php">
                     <label class="form-label" for="username">نام کاربری</label>
                     <input type="text" class="form-control sborder" id="username" name="username" placeholder="نام کاربری">
                     <br>
