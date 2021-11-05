@@ -45,7 +45,26 @@ $get_posts_result = mysqli_query($connection, $get_posts_query);
                     <?php
                     if (mysqli_num_rows($get_posts_result) != 0) {
                         while ($post = mysqli_fetch_assoc($get_posts_result)) {
-                            echo $post['title'];
+                            ?>
+                            <p>
+                                <span class="post-title"><?php echo $post['title']; ?></span>
+                                <span class="left" style="float: left;">
+                                    <i class="fa fa-trash action text-danger"></i>
+                                    &nbsp;
+                                    <i class="fa fa-eye action text-primary"></i>
+                                    &nbsp;
+                                    <?php
+                                    if ($post['status'] == 'public') {
+                                        echo "<i class='fa fa-circle text-success'></i>";
+                                    }
+                                    else {
+                                        echo "<i class='fa fa-circle text-danger'></i>";
+                                    }
+                                    ?>
+                                </span>
+                            </p>
+                            <hr>
+                            <?php
                         }
                     }
                     else {
