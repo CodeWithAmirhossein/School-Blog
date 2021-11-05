@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +24,7 @@
 </head>
 <body>
     <span>
-        <؟php echo "صفحه مورد نظر پیدا نشد."; ?>
+        متاسفانه مطلب مورد نظر پیدا نشد
     </span>
 </body>
 </html>
