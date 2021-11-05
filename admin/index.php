@@ -45,13 +45,16 @@ $get_posts_result = mysqli_query($connection, $get_posts_query);
                     <?php
                     if (mysqli_num_rows($get_posts_result) != 0) {
                         while ($post = mysqli_fetch_assoc($get_posts_result)) {
+                            $id = $post['row'];
                             ?>
                             <p>
                                 <span class="post-title"><?php echo $post['title']; ?></span>
                                 <span class="left" style="float: left;">
-                                    <i class="fa fa-trash action text-danger"></i>
+                                    <i onclick="location.href = '../post/index.php?id=<?php echo $id; ?>'" class="fa fa-sign-in action text-info"></i>
                                     &nbsp;
-                                    <i class="fa fa-eye action text-primary"></i>
+                                    <i onclick="location.href = 'index.php?delete=<?php echo $id; ?>'" class="fa fa-trash action text-danger"></i>
+                                    &nbsp;
+                                    <i onclick="location.href = 'index.php?status=<?php echo $id; ?>'" class="fa fa-eye action text-primary"></i>
                                     &nbsp;
                                     <?php
                                     if ($post['status'] == 'public') {
