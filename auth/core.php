@@ -7,8 +7,8 @@ include("../pack/config/config.php");
 $errors = array();
 
 if (isset($_POST['login'])) {
-    $username = mysqli_real_escape_string($_POST['username'], $connection);
-    $password = mysqli_real_escape_string($_POST['password'], $connection);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     if (empty($username)) {
         array_push($errors, "نام کاربری را وارد کنید.");
@@ -18,8 +18,8 @@ if (isset($_POST['login'])) {
     }
 
     if (count($errors) == 0) {
-        if ($username == "amir" && $password == "coldweather") {
-            $_SESSION['status'] == true;
+        if ($username == "admin" && $password == "admin") {
+            $_SESSION['status'] = true;
             ?>
             <script>
                 window.location.replace('../admin');
