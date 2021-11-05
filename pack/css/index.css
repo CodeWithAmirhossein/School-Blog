@@ -1,0 +1,31 @@
+body {
+    background: white;
+    direction: rtl;
+    text-align: right;
+}
+
+.main {
+    padding: 5%;
+    background: #ddd;
+}
+
+.dialog {
+    background-color: #f1f1f1;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.more {
+    text-decoration: none;
+    color: red;
+}
+.more:hover {
+    /* color: orange; */
+    opacity: 80%;
+}
+.pfooter {
+    font-size: 12px;
+}
+.side {
+    position: fixed;
+}
