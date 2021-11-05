@@ -35,7 +35,7 @@ $get_posts_result = mysqli_query($connection, $get_posts_query);
                                 <?php echo substr($post['content'], 0, 100) . " . . . "; ?>
                             </p>
                             <p class="pfooter">
-                                <a href="post/index.php?id=<?php echo $post['row']; ?>" class="more">
+                                <a target="_blank" href="post/index.php?id=<?php echo $post['row']; ?>" class="more">
                                     مشاهده مطلب کامل
                                 </a>
                                 <span style="float: left;">
@@ -66,7 +66,7 @@ $get_posts_result = mysqli_query($connection, $get_posts_query);
                         while ($post = mysqli_fetch_assoc($get_posts_result)) {
                             ?>
                             <p>
-                                <a class="more" href="post/index.php?id=<?php echo $post['row']; ?>">
+                                <a target="_blank" class="more" href="post/index.php?id=<?php echo $post['row']; ?>">
                                     <?php echo $post['title']; ?>
                                 </a>
                             </p>
