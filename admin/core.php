@@ -48,3 +48,25 @@ if (isset($_POST['post'])) {
         }
     }
 }
+
+if (isset($_GET['delete'])) {
+    $post = $_GET['delete'];
+
+    $delete = "DELETE FROM posts WHERE `row` = '$post'";
+    if (mysqli_query($connection, $delete)) {
+        ?>
+        <script>
+            window.alert("پست حذف شد");
+            window.location.replace(".");
+        </script>
+        <?php
+    }
+    else {
+        ?>
+        <script>
+            window.alert("<?php echo mysqli_error($connection); ?>");
+            window.location.replace(".");
+        </script>
+        <?php
+    }
+}
