@@ -81,6 +81,7 @@ $get_posts_result = mysqli_query($connection, $get_posts_query);
                     ?>
                     </div>
                 </div>
+                <br>
             </div>
         </div>
     </div>
