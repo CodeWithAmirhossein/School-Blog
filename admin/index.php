@@ -75,8 +75,8 @@ $get_posts_result = mysqli_query($connection, $get_posts_query);
                         echo "پست جدیدی ثبت نشده است.";
                     }
                     ?>
-                    <br>
                 </div>
+                <br>
             </div>
         </div>
     </div>
